@@ -1,0 +1,12 @@
+# Backend
+/backend/node_modules
+/backend/.env
+
+# Android
+/android/.gradle
+/android/.idea
+/android/local.properties
+/android/**/build
+
+# OS
+.DS_Store
