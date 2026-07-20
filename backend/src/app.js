@@ -7,8 +7,18 @@ const userService = require('./services/userService');
 
 function createApp(deps = { userService }) {
   const app = express();
+  const allowedOrigins = env.corsOrigin
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean);
 
-  app.use(cors({ origin: env.corsOrigin }));
+  app.use(cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) return callback(null, true);
+      return callback(new Error('CORS blocked'));
+    },
+  }));
   app.use(express.json());
 
   app.use((req, _res, next) => {

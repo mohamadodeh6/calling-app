@@ -20,7 +20,7 @@ module.exports = {
   databaseUrl: process.env.DATABASE_URL,
   jwtSecret: process.env.JWT_SECRET,
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
-  corsOrigin: process.env.CORS_ORIGIN || '*',
+  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   stunServer: process.env.STUN_SERVER || 'stun:stun.l.google.com:19302',
   turnUrl: process.env.TURN_URL || '',
   turnUsername: process.env.TURN_USERNAME || '',

@@ -64,7 +64,7 @@ Minimal production-oriented MVP for one-to-one voice calls with:
 - `DATABASE_URL` (required)
 - `JWT_SECRET` (required)
 - `JWT_EXPIRES_IN` (default: `7d`)
-- `CORS_ORIGIN` (default: `*`)
+- `CORS_ORIGIN` (default: `http://localhost:3000`, comma-separated allow-list supported)
 - `STUN_SERVER` (default: `stun:stun.l.google.com:19302`)
 - `TURN_URL` (optional)
 - `TURN_USERNAME` (optional)
